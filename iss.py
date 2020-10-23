@@ -3,7 +3,11 @@ import requests
 import time
 import turtle
 
-__author__ = 'Darrell Purcell'
+__author__ = """Darrell Purcell with help from
+Daniel Lomelino and
+https://docs.python.org/3/library/turtle.html#turtle.dot
+https://www.geeksforgeeks.org/turtle-setpos-and-turtle-goto-functions-in-python/
+"""
 
 
 def in_space():
@@ -40,11 +44,12 @@ def render_map(x, y):
 
     screen.setup(width=720, height=360)
     screen.bgpic('map.gif')
-    screen.setworldcoordinates(-720, -360, 720, 360)
+    screen.setworldcoordinates(-180, -90, 180, 90)
     screen.register_shape('iss.gif')
     marker.penup()
     marker.goto(indy_x, indy_y)
     marker.dot(10, 'yellow')
+    marker.color('yellow')
     marker.write(pass_time)
     marker.shape('iss.gif')
     marker.penup()
